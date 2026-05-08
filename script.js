@@ -237,8 +237,8 @@ if (shareButton) {
       return;
     }
 
-    const shareURL =
-  `${window.location.origin}${window.location.pathname}score.html?wpm=${latestWPM}`;
+   const shareURL =
+  `https://Kanerock17yt.github.io/JustType/score.html?wpm=${latestWPM}`;
 
     navigator.clipboard.writeText(shareURL);
 
