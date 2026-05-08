@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+
+  <!-- Default fallback (important) -->
+  <title>JustType Score</title>
+
+  <!-- Open Graph (Discord embeds) -->
+  <meta property="og:title" content="JustType Score" />
+  <meta property="og:description" content="Can you beat this typing speed?" />
+  <meta property="og:image" content="https://kanerock17yt.github.io/JustType/embed.png" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111;
+      color: white;
+      font-family: Arial;
+    }
+    .card {
+      text-align: center;
+    }
+    .wpm {
+      font-size: 90px;
+      font-weight: bold;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="wpm" id="wpm">0 WPM</div>
+    <div id="acc"></div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+
+    const wpm = params.get("wpm");
+    const acc = params.get("acc");
+
+    document.getElementById("wpm").innerText = (wpm || 0) + " WPM";
+
+    if (acc) {
+      document.getElementById("acc").innerText = "Accuracy: " + acc + "%";
+    }
+  </script>
+
+</body>
+</html>
